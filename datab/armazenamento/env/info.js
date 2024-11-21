@@ -1,7 +1,7 @@
 // Configurações & Informações
 
 const configurações = {
-  prefixo: "/",
+  prefixo: "#",
   nomeBot: "Luciano Store", // Nome do bot
   nomeDono: "Loja Do Luciano", // Seu nome
   numeroDono: "5528999501464" // Seu número

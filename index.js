@@ -48,7 +48,7 @@ const vcard = "BEGIN:VCARD\n"
 + "VERSION:3.0\n" 
 + "FN:Ton\n" // Nome completo
 + "ORG:Lwa Company;\n" // A organização do contato
-+ "TEL;type=CELL;type=VOICE;waid=558586294618:+55 85 8629-4618\n" // WhatsApp ID + Número de telefone
++ "TEL;type=CELL;type=VOICE;waid=552899501464:+55 28 9950-1464\n" // WhatsApp ID + Número de telefone
 + "END:VCARD" // Fim do ctt
 
 async function laur() {
@@ -215,15 +215,13 @@ console.log(e)
 // New auto reconexão própria
 conn.ev.on("connection.update", (update) => {
 let { connection, lastDisconnect } = update
-
 if (connection === "open") {
-console.log(chalk.greenBright("Laura 3.0 conectada ✓"))
+console.log(chalk.greenBright("Luciano Store Conectado ✓"))
 console.log(chalk.gray("Info"), color("Os: Baileys"))
 console.log(chalk.gray("Info"), color("Versão: 3.0 (Lite)"))
-console.log(chalk.gray("Info"), color("Dev: Ton"))
+console.log(chalk.gray("Info"), color("Dev: LucianoStore"))
 console.log(chalk.gray("Boa Sorte!\n"))
 } else if (connection === "close") {
-
 console.log(chalk.dim("Ocorreu um conflito na conexão"))
 laur()
 }

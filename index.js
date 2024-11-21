@@ -369,10 +369,9 @@ color(sender.split("@")[0]))
 
 // Começo dos comandos com prefix
 switch (comando) {
+
 // Feito por Ton
-case "pix":
-enviar("Chave Pix Celular                                                                                            NUMERO: 28999501464                                                                                        NOME: Luciano Figueira                                                                                        BANCO: nubank")
-break
+
 case "programado":
 case "suporte":
 case "dono":
@@ -384,6 +383,7 @@ conn.sendMessage(sender, { contacts: { displayName: `${nomeDono}`, contacts: [{ 
 console.log(e)
 }
 break
+
 case "tag":
 case "hidetag":
 if (!isGroup) return enviar("Este comando só poderia ser utilizado em grupo.")
@@ -397,39 +397,33 @@ let options = {
 }
 conn.sendMessage(from, options)
 break
+
 case "reagir":
 {
-conn.sendMessage(from, { react: { text: "??", key: info.key }})
+conn.sendMessage(from, { react: { text: "🐳", key: info.key }})
 }
 break
+
 case "ping":
 if (!isOwner) return enviar("Você não e meu dono...")
 enviar(`☁️ Velocidade: ${latensi.toFixed(4)}`)
 break
+
 default:
+
 // Comandos sem prefixo
 switch (testat) {
-case "Boa tarde":
-enviar("boa tarde")
-break
 
 case "corno":
-conn.sendMessage(from, { react: { text: "", key: info.key }})
+enviar("Você tá bravinha? tá?")
 break
 
-case "Bom dia":
-enviar("Bom dia")
-break
-case "Boa tarde":
-conn.sendMessage(from, { react: { text: "☕ ", key: info.key }})
-break
-case "B":
-conn.sendMessage(from, { react: { text: "p ", key: info.key }})
-break
 case "bom dia":
-conn.sendMessage(from, { react: { text: "☕ ", key: info.key }})
+conn.sendMessage(from, { react: { text: "☕", key: info.key }})
 break
+
 }
+
 // Resposta quando o comando não é encontrado
 if (isCmd) {
 enviar("Comando não encontrado... 🐳")
